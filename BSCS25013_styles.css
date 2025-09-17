@@ -1,0 +1,326 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+}
+
+#nav {
+    height: 7vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#button1 {
+    height: 7vh;
+    width: 8vw;
+    color: black;
+    background-color: white;
+    border: 0.5vh solid gold;
+    font-size: 1.5vw;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#button1:hover {
+    background-color: black;
+    color: gold;
+}
+
+#button2 {
+    height: 15vh;
+    width: 30vw;
+    color: black;
+    background-color: white;
+    border: 1vh double gold;
+    font-size: 2vw;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#button2:hover {
+    background-color: black;
+    color: gold;
+}
+
+.full_width_image {
+    width: 100vw;
+    height: 110vh;
+    border: 0.5vh solid black;
+}
+
+.image_text1 {
+    position: absolute;
+    color: black;
+    top: 5vh;
+    left: 20vw;
+    font: bold;
+    font-size: 4vw;
+    padding: 0;
+}
+
+.image_text2 {
+    position: absolute;
+    color: red;
+    top: 120vh;
+    left: 25vw;
+    font: bold;
+    font-size: 2vw;
+}
+
+.book_display {
+    position: relative;
+    width: 100vw;
+    height: 75vh;
+    border: 0.5vh double goldenrod;
+    padding: 2vh;
+}
+
+.Topic {
+    width: 100vw;
+    height: 12vh;
+    background-color: grey;
+    color: gold;
+    font-size: 5vw;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center;
+    border: 0.5vh double goldenrod;
+}
+
+.small_image {
+    position: absolute;
+    width: 20vw;
+    height: 50vh;
+    right: 5vw;
+    top: 10vh;
+}
+
+.Product_Info {
+    position: absolute;
+    width: 35vw;
+    height: 55vh;
+}
+
+.Product_Name {
+    font-size: 3.5vw;
+    top: 5vh;
+    left: 8vw;
+    font-style: italic;
+}
+
+.description {
+    font-size: 1.8vw;
+    top: 5vh;
+    left: 8vw;
+    font-style: oblique;
+    text-align: center;
+}
+
+.book-button {
+  background-color: #D4AF37;      
+  color: #1A1A1A;                
+  border: none;
+  padding: 2vh 3vw;
+  font-size: 1.2vw;
+  font-family: 'Georgia', serif;
+  cursor: pointer;
+  border-radius: 0.5vw;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #B18E2D;     
+  color: #ffffff;                
+}
+
+.book-button:active {
+  background-color: #A8841F;      
+}
+
+.book-button:focus {
+  outline: 0.3vh solid #FFD700;     
+  outline-offset: 0.5vh;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.flex1-item {
+  width: 100%;
+  height: 20vh; 
+  background-color: #ccc; 
+  position: relative;
+}
+
+.logo1 {
+  width: 8vw;
+  height: 8vw;
+  top: 1vh;
+  left: 15vw;
+  position: absolute;
+}
+
+.logo1_text {
+  font-size: 3vw;
+  top: 2vh;
+  left: 35vw;
+  position: absolute;
+}
+.logo2_text {
+  font-size: 1vw;
+  top: 0vh;
+  left: 35vw;
+  position: absolute;
+}
+.flex2-item {
+  width: 100%;
+  height: 7vh; 
+  background-color: #ccc; 
+  position: relative;
+}
+
+.logo2 {
+  width: 3vw;
+  height: 3vw;
+  top: 1vh;
+  left: 15vw;
+  position: absolute;
+}
+
+.ValidationForm {
+    width: 100vw;
+    height: 10vh;
+    background-color:skyblue;
+    color: sienna;
+    font-size: 1.5vw;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center;
+    border: 1vh double goldenrod;
+}
+
+/* Chatbot iframe specific styles */
+body#chatbot-body, html#chatbot-html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+.chatbot-window {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 16px 16px 8px 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.chatbot-header {
+  background: #e6e6e6;
+  color: #333;
+  font-weight: bold;
+  padding: 14px 18px;
+  font-size: 1.2em;
+  border-bottom: 1px solid #ddd;
+  letter-spacing: 1px;
+}
+#chatbot-close {
+  color: #888;
+  font-size: 1.3em;
+  transition: color 0.2s;
+}
+#chatbot-close:hover {
+  color: #e57373;
+}
+.chatbot-messages {
+  flex: 1;
+  padding: 16px 12px 8px 12px;
+  overflow-y: auto;
+  background: #f7f7fa;
+}
+.chatbot-user-msg {
+  background: #e3f2fd;
+  color: #1565c0;
+  padding: 8px 12px;
+  border-radius: 16px 16px 2px 16px;
+  margin: 6px 0 6px 40px;
+  max-width: 80%;
+  align-self: flex-end;
+  font-size: 1em;
+}
+.chatbot-bot-msg {
+  background: #fffde7;
+  color: #b28900;
+  padding: 8px 12px;
+  border-radius: 16px 16px 16px 2px;
+  margin: 6px 40px 6px 0;
+  max-width: 80%;
+  align-self: flex-start;
+  font-size: 1em;
+  border: 1px solid #f5e9b2;
+}
+#chatbot-initiate {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0 0 12px 0;
+}
+#start-chat-btn {
+  background: #ffd54f;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 28px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.2s, color 0.2s;
+}
+#start-chat-btn:hover {
+  background: #ffe082;
+  color: #b28900;
+}
+#chatbot-input-area {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  background: #f5f5f5;
+  border-top: 1px solid #eee;
+}
+#chatbot-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  font-size: 1em;
+  margin-right: 8px;
+  background: #fff;
+  color: #333;
+}
+#chatbot-input:focus {
+  outline: 2px solid #ffd54f;
+}
+#chatbot-input-area button {
+  background: #4fc3f7;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 8px 18px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#chatbot-input-area button:hover {
+  background: #0288d1;
+}

@@ -1,0 +1,107 @@
+<!Doctype html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dar ul-Tafsir</title>
+    <link rel="stylesheet" href="BSCS25013_styles.css">
+    <script src="BSCS25013_script.js" defer></script>
+</head>
+<body id="Contact">
+
+    <div class="ValidationForm">
+        <form id="validationForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required> 
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required> 
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Submit</button>
+            <div id="error" style="color:red;"></div>
+            <div id="success" style="color:green;"></div>
+        </form>
+    </div>
+
+    <section name="Navbar/Header">
+        <div id="nav">
+            <a href="BSCS25013_Home.html">
+                <button id="button1"> Home </button>
+            </a>
+            <a href="BSCS25013_Products.html">
+                <button id="button1"> Products </button>
+            </a>
+            <a href="BSCS25013_AboutUs.html">
+                <button id="button1"> About us </button>
+            </a>
+        </div>
+    </section>
+    
+    <section >
+        <div class="Topic">
+            Contact Us
+        </div>
+    </section>
+
+    <div class="flex-container">
+        <div class="flex1-item"style="background-color: #1A1A1A; color: #D4AF37;">
+            <img src="BSCS25013_IMG08.jpg" class="logo1">
+            <h3 class="logo1_text"><i>Cell# : 03124336896</i></h3>
+        </div>
+        <div class="flex1-item"style="background-color: #3E3B32; color: #F0EAD6;">
+            <img src="BSCS25013_IMG09.jpg" class="logo1">
+            <h3 class="logo1_text"><i>Email : aliabdullah39111@gmail.com</i></h3>
+        </div>
+        <div class="flex1-item"style="background-color: #1C2630; color: #C8AD55;">
+            <img src="BSCS25013_IMG10.jpeg" class="logo1">
+            <h3 class="logo1_text"><i>Location : Arfa Software Technology Park, Lahore</i></h3>
+        </div> 
+        <div class="flex1-item"style="background-color: #3A2E39;">
+            <a href="https://web.facebook.com/profile.php?id=61574743243256" style=" color: #E3D7B6;">
+                <img src="BSCS25013_IMG13.png" class="logo1">
+                <h3 class="logo1_text"><i>Visit my Facebook page</i></h3>
+            </a>
+        </div>
+        <div class="flex1-item"style="background-color: #4A3F35;">
+            <a href="https://www.linkedin.com/in/ali-abdullah-8a3521384" style=" color: #ECD9A2;">
+                <img src="BSCS25013_IMG12.png" class="logo1">
+                <h3 class="logo1_text"><i>Visit my linked in profile</i></h3>
+            </a>
+        </div>
+        <div class="flex1-item"style="background-color: #1A1A1A;">
+            <a href="https://www.instagram.com/aliabdullah39111" style=" color: #D4AF37;">
+                <img src="BSCS25013_IMG11.jpeg" class="logo1">
+                <h3 class="logo1_text"><i>Visit my instagram page</i></h3>
+            </a>
+        </div>       
+    </div>
+
+    <button class="chatbot-open-btn" id="chatbot-open-btn" style="position:fixed;bottom:30px;right:30px;z-index:1000;">Chat with us!</button>
+    <iframe id="chatbot-iframe" src="BSCS25013_ChatBot.html" style="display:none;position:fixed;bottom:90px;right:30px;width:350px;height:450px;border:none;box-shadow:0 4px 16px rgba(0,0,0,0.2);z-index:1001;background:white;"></iframe>
+    <script>
+    var chatbotBtn = document.getElementById('chatbot-open-btn');
+    var chatbotIframe = document.getElementById('chatbot-iframe');
+    chatbotBtn.onclick = function() {
+        if (chatbotIframe.style.display === 'block') {
+            chatbotIframe.style.display = 'none';
+        } else {
+            chatbotIframe.style.display = 'block';
+            // Focus the Start Chat button inside the iframe after it loads
+            setTimeout(function() {
+                try {
+                    var startBtn = chatbotIframe.contentWindow.document.getElementById('start-chat-btn');
+                    if(startBtn) startBtn.focus();
+                } catch(e) {}
+            }, 300);
+        }
+    };
+    // Listen for iframe close from inside
+    window.addEventListener('message', function(event) {
+        if(event.data === 'close-chatbot') {
+            chatbotIframe.style.display = 'none';
+        }
+    });
+    </script>
+
+</body>
