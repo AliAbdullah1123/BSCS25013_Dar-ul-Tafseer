@@ -6,9 +6,7 @@
     <title>Chatbot</title>
     <link rel="stylesheet" href="BSCS25013_styles.css">
     <script>
-    // Simple chatbot logic for beginners
     document.addEventListener("DOMContentLoaded", function() {
-      // Close button hides the chatbot window
       document.getElementById('chatbot-close').onclick = function() {
         if(window.parent !== window) {
           window.parent.postMessage('close-chatbot', '*');
@@ -16,14 +14,12 @@
           window.close();
         }
       };
-      // Show input area when Start Chat is clicked
       document.getElementById('start-chat-btn').onclick = function() {
         document.getElementById('chatbot-initiate').style.display = 'none';
         document.getElementById('chatbot-input-area').style.display = 'flex';
         addChatMessage('Bot', 'Hello! How can I help you today?', 'chatbot-bot-msg');
         document.getElementById('chatbot-input').focus();
       };
-      // Add message to chat
       function addChatMessage(sender, text, className) {
         var messages = document.getElementById('chatbot-messages');
         var div = document.createElement('div');
@@ -32,14 +28,12 @@
         messages.appendChild(div);
         messages.scrollTop = messages.scrollHeight;
       }
-      // Send message when button is clicked
       window.sendChatbotMessage = function() {
         var input = document.getElementById('chatbot-input');
         var userMsg = input.value.trim();
         if (!userMsg) return;
         addChatMessage('You', userMsg, 'chatbot-user-msg');
         input.value = '';
-        // Simple bot replies
         var botReply = '';
         if (userMsg.toLowerCase().includes('hello') || userMsg.toLowerCase().includes('hi')) {
           botReply = 'Hello! How can I assist you today?';
@@ -74,3 +68,4 @@
     </div>
 </body>
 </html>
+
